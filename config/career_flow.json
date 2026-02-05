@@ -4,11 +4,7 @@
     "title": "Career Direction Navigator",
     "org": "Phillips 66",
     "language": "en-US",
-    "generatedAt": "2026-02-04",
-    "notes": [
-      "This config is designed for a no-backend HTML prototype.",
-      "All wording lives here; code should only render screens + apply scoring + generate summaries."
-    ]
+    "generatedAt": "2026-02-04"
   },
 
   "paths": [
@@ -50,7 +46,6 @@
       { "id": "scope", "label": "Scope / responsibility" },
       { "id": "breadth", "label": "Breadth / perspective" },
       { "id": "recalibration", "label": "Recalibration / reset" },
-
       { "id": "execution", "label": "Energy from execution" },
       { "id": "decisionMaking", "label": "Energy from decision-making" },
       { "id": "people", "label": "Energy from people/mentoring" },
@@ -71,7 +66,6 @@
       { "id": "recommendation", "type": "recommendation" },
       { "id": "compare", "type": "compareOptional" },
       { "id": "refinement", "type": "questionWizard" },
-      { "id": "focusStatement", "type": "focusStatement" },
       { "id": "plan", "type": "planBuilder" },
       { "id": "summary", "type": "summaryPreview" },
       { "id": "share", "type": "share" }
@@ -178,7 +172,6 @@
           }
         ]
       },
-
       {
         "id": "D2",
         "screenTitle": "What’s most true today?",
@@ -211,7 +204,6 @@
           }
         ]
       },
-
       {
         "id": "D3",
         "screenTitle": "What gives you energy?",
@@ -245,7 +237,6 @@
           }
         ]
       },
-
       {
         "id": "D4",
         "screenTitle": "What do you want more of?",
@@ -278,7 +269,6 @@
           }
         ]
       },
-
       {
         "id": "D5",
         "screenTitle": "What’s the friction point?",
@@ -311,7 +301,6 @@
           }
         ]
       },
-
       {
         "id": "D6",
         "screenTitle": "Ambiguity check",
@@ -338,7 +327,6 @@
           }
         ]
       },
-
       {
         "id": "D7",
         "screenTitle": "Readiness check",
@@ -365,7 +353,6 @@
           }
         ]
       },
-
       {
         "id": "TB1",
         "screenTitle": "Pressure-test",
@@ -398,7 +385,6 @@
           }
         ]
       },
-
       {
         "id": "TB2",
         "screenTitle": "Another pressure-test",
@@ -494,31 +480,6 @@
             { "id": "R_LU_2C", "label": "More ambiguity", "sets": { "versionOfPath.tradeoff": "moreAmbiguity" } },
             { "id": "R_LU_2D", "label": "More visibility and scrutiny", "sets": { "versionOfPath.tradeoff": "moreVisibility" } }
           ]
-        },
-        {
-          "id": "R_LU_3",
-          "screenTitle": "Scope preference",
-          "prompt": "If you Level Up, what kind of scope feels most appealing?",
-          "type": "single",
-          "options": [
-            { "id": "R_LU_3A", "label": "Team scope (leading a team’s outcomes)", "sets": { "versionOfPath.scopeType": "team" } },
-            { "id": "R_LU_3B", "label": "Program scope (owning an initiative end-to-end)", "sets": { "versionOfPath.scopeType": "program" } },
-            { "id": "R_LU_3C", "label": "Cross-functional scope (influencing across teams)", "sets": { "versionOfPath.scopeType": "crossFunctional" } },
-            { "id": "R_LU_3D", "label": "Domain scope (expert ownership of a technical/functional area)", "sets": { "versionOfPath.scopeType": "domain" } }
-          ]
-        },
-        {
-          "id": "R_LU_4",
-          "screenTitle": "Proof points",
-          "prompt": "What would you want to “prove” before the next move is formal?",
-          "type": "multi",
-          "maxSelections": 2,
-          "options": [
-            { "id": "R_LU_4A", "label": "I can lead through others (not just do the work).", "sets": { "versionOfPath.proof": "leadThroughOthers" } },
-            { "id": "R_LU_4B", "label": "I can own outcomes under pressure.", "sets": { "versionOfPath.proof": "ownOutcomes" } },
-            { "id": "R_LU_4C", "label": "I can influence stakeholders effectively.", "sets": { "versionOfPath.proof": "influence" } },
-            { "id": "R_LU_4D", "label": "I can handle ambiguity without stalling.", "sets": { "versionOfPath.proof": "ambiguityHandling" } }
-          ]
         }
       ],
 
@@ -530,66 +491,10 @@
           "type": "multi",
           "maxSelections": 2,
           "options": [
-            {
-              "id": "R_TH_1A",
-              "label": "Tackling more complex problems",
-              "sets": { "versionOfPath.thriveFocus": "complexity" },
-              "signals": { "depth": 2 }
-            },
-            {
-              "id": "R_TH_1B",
-              "label": "Becoming the go-to expert",
-              "sets": { "versionOfPath.thriveFocus": "expertise" },
-              "signals": { "depth": 2 }
-            },
-            {
-              "id": "R_TH_1C",
-              "label": "Improving quality or efficiency",
-              "sets": { "versionOfPath.thriveFocus": "qualityEfficiency" },
-              "signals": { "execution": 1, "depth": 1 }
-            },
-            {
-              "id": "R_TH_1D",
-              "label": "Mentoring others informally",
-              "sets": { "versionOfPath.thriveFocus": "mentoring" },
-              "signals": { "people": 1, "depth": 1 }
-            }
-          ]
-        },
-        {
-          "id": "R_TH_2",
-          "screenTitle": "Impact lever",
-          "prompt": "Where do you want to increase your impact most?",
-          "type": "single",
-          "options": [
-            { "id": "R_TH_2A", "label": "Reliability and results (raise the floor)", "sets": { "versionOfPath.impactLever": "reliability" } },
-            { "id": "R_TH_2B", "label": "Problem-solving (raise the ceiling)", "sets": { "versionOfPath.impactLever": "problemSolving" } },
-            { "id": "R_TH_2C", "label": "Process improvement (make the system better)", "sets": { "versionOfPath.impactLever": "process" } },
-            { "id": "R_TH_2D", "label": "Knowledge-sharing (make others better)", "sets": { "versionOfPath.impactLever": "knowledgeSharing" } }
-          ]
-        },
-        {
-          "id": "R_TH_3",
-          "screenTitle": "Stretch without moving",
-          "prompt": "What kind of stretch would feel worthwhile while staying in role?",
-          "type": "single",
-          "options": [
-            { "id": "R_TH_3A", "label": "Harder problems (complexity)", "sets": { "versionOfPath.stretchType": "complexity" } },
-            { "id": "R_TH_3B", "label": "More ownership (end-to-end)", "sets": { "versionOfPath.stretchType": "ownership" } },
-            { "id": "R_TH_3C", "label": "More influence (stakeholders)", "sets": { "versionOfPath.stretchType": "influence" } },
-            { "id": "R_TH_3D", "label": "More coaching/mentoring", "sets": { "versionOfPath.stretchType": "mentoring" } }
-          ]
-        },
-        {
-          "id": "R_TH_4",
-          "screenTitle": "Avoid the trap",
-          "prompt": "Which risk do you want to avoid while “Thriving in Place”?",
-          "type": "single",
-          "options": [
-            { "id": "R_TH_4A", "label": "Getting too comfortable", "sets": { "versionOfPath.watchout": "comfort" } },
-            { "id": "R_TH_4B", "label": "Staying invisible", "sets": { "versionOfPath.watchout": "visibility" } },
-            { "id": "R_TH_4C", "label": "Being underutilized", "sets": { "versionOfPath.watchout": "underutilized" } },
-            { "id": "R_TH_4D", "label": "Not building transferable skills", "sets": { "versionOfPath.watchout": "transferability" } }
+            { "id": "R_TH_1A", "label": "Tackling more complex problems", "sets": { "versionOfPath.thriveFocus": "complexity" }, "signals": { "depth": 2 } },
+            { "id": "R_TH_1B", "label": "Becoming the go-to expert", "sets": { "versionOfPath.thriveFocus": "expertise" }, "signals": { "depth": 2 } },
+            { "id": "R_TH_1C", "label": "Improving quality or efficiency", "sets": { "versionOfPath.thriveFocus": "qualityEfficiency" }, "signals": { "execution": 1, "depth": 1 } },
+            { "id": "R_TH_1D", "label": "Mentoring others informally", "sets": { "versionOfPath.thriveFocus": "mentoring" }, "signals": { "people": 1, "depth": 1 } }
           ]
         }
       ],
@@ -606,40 +511,6 @@
             { "id": "R_MA_1C", "label": "Better fit (work style / strengths)", "sets": { "versionOfPath.acrossPurpose": "betterFit" }, "signals": { "breadth": 1 } },
             { "id": "R_MA_1D", "label": "Long-term optionality (opening future doors)", "sets": { "versionOfPath.acrossPurpose": "optionality" }, "signals": { "breadth": 2, "learning": 1 } }
           ]
-        },
-        {
-          "id": "R_MA_2",
-          "screenTitle": "Similarity level",
-          "prompt": "How similar should the next role be to what you do now?",
-          "type": "single",
-          "options": [
-            { "id": "R_MA_2A", "label": "Very similar work, new context", "sets": { "versionOfPath.similarity": "verySimilar" } },
-            { "id": "R_MA_2B", "label": "Some overlap, some stretch", "sets": { "versionOfPath.similarity": "mixed" } },
-            { "id": "R_MA_2C", "label": "Mostly new", "sets": { "versionOfPath.similarity": "mostlyNew" } }
-          ]
-        },
-        {
-          "id": "R_MA_3",
-          "screenTitle": "Strategy vs curiosity",
-          "prompt": "Is this move mainly curiosity, strategy, or both?",
-          "type": "single",
-          "options": [
-            { "id": "R_MA_3A", "label": "Curiosity", "sets": { "versionOfPath.driver": "curiosity" } },
-            { "id": "R_MA_3B", "label": "Strategy", "sets": { "versionOfPath.driver": "strategy" } },
-            { "id": "R_MA_3C", "label": "Both", "sets": { "versionOfPath.driver": "both" } }
-          ]
-        },
-        {
-          "id": "R_MA_4",
-          "screenTitle": "The tradeoff test",
-          "prompt": "What tradeoff are you most willing to accept to make a Move Across work?",
-          "type": "single",
-          "options": [
-            { "id": "R_MA_4A", "label": "Being new again (learning curve)", "sets": { "versionOfPath.tradeoff": "learningCurve" } },
-            { "id": "R_MA_4B", "label": "Short-term performance dip", "sets": { "versionOfPath.tradeoff": "shortTermDip" } },
-            { "id": "R_MA_4C", "label": "More ambiguity in the beginning", "sets": { "versionOfPath.tradeoff": "ambiguity" } },
-            { "id": "R_MA_4D", "label": "Rebuilding relationships / network", "sets": { "versionOfPath.tradeoff": "networkRebuild" } }
-          ]
         }
       ],
 
@@ -654,41 +525,6 @@
             { "id": "R_EX_1B", "label": "Shadowing (observe how a role works)", "sets": { "versionOfPath.exploreMode": "shadow" } },
             { "id": "R_EX_1C", "label": "Temporary assignment (time-boxed rotation)", "sets": { "versionOfPath.exploreMode": "temporaryAssignment" } },
             { "id": "R_EX_1D", "label": "Cross-team collaboration (recurring touchpoints)", "sets": { "versionOfPath.exploreMode": "crossTeam" } }
-          ]
-        },
-        {
-          "id": "R_EX_2",
-          "screenTitle": "The real question",
-          "prompt": "What question are you trying to answer about yourself?",
-          "type": "single",
-          "options": [
-            { "id": "R_EX_2A", "label": "What kind of work energizes me most?", "sets": { "versionOfPath.coreQuestion": "energy" } },
-            { "id": "R_EX_2B", "label": "What kind of impact do I want to have?", "sets": { "versionOfPath.coreQuestion": "impact" } },
-            { "id": "R_EX_2C", "label": "What environment helps me do my best work?", "sets": { "versionOfPath.coreQuestion": "environment" } },
-            { "id": "R_EX_2D", "label": "What do I want to be known for?", "sets": { "versionOfPath.coreQuestion": "reputation" } }
-          ]
-        },
-        {
-          "id": "R_EX_3",
-          "screenTitle": "Structure",
-          "prompt": "How much disruption are you willing to tolerate for exploration?",
-          "type": "single",
-          "options": [
-            { "id": "R_EX_3A", "label": "Low (keep it lightweight)", "sets": { "versionOfPath.disruption": "low" } },
-            { "id": "R_EX_3B", "label": "Medium (some change is fine)", "sets": { "versionOfPath.disruption": "medium" } },
-            { "id": "R_EX_3C", "label": "High (I’m okay with big change)", "sets": { "versionOfPath.disruption": "high" } }
-          ]
-        },
-        {
-          "id": "R_EX_4",
-          "screenTitle": "The tradeoff test",
-          "prompt": "What tradeoff are you most willing to accept while you explore?",
-          "type": "single",
-          "options": [
-            { "id": "R_EX_4A", "label": "Not knowing the answer right away", "sets": { "versionOfPath.tradeoff": "patience" } },
-            { "id": "R_EX_4B", "label": "Trying something and deciding it’s not for me", "sets": { "versionOfPath.tradeoff": "safeFailure" } },
-            { "id": "R_EX_4C", "label": "Asking for time/help from others", "sets": { "versionOfPath.tradeoff": "asks" } },
-            { "id": "R_EX_4D", "label": "Saying no to some current work to make space", "sets": { "versionOfPath.tradeoff": "prioritization" } }
           ]
         }
       ],
@@ -705,42 +541,6 @@
             { "id": "R_RE_1C", "label": "Mismatch (role fit isn’t right)", "sets": { "versionOfPath.resetDriver": "mismatch" }, "signals": { "breadth": 1, "recalibration": 1 } },
             { "id": "R_RE_1D", "label": "Life change / capacity shift", "sets": { "versionOfPath.resetDriver": "lifeChange" }, "signals": { "recalibration": 2 } }
           ]
-        },
-        {
-          "id": "R_RE_2",
-          "screenTitle": "What a successful reset enables",
-          "prompt": "What would a successful reset make possible?",
-          "type": "single",
-          "options": [
-            { "id": "R_RE_2A", "label": "Sustainable performance and energy", "sets": { "versionOfPath.resetOutcome": "sustainability" } },
-            { "id": "R_RE_2B", "label": "Confidence through skill-building", "sets": { "versionOfPath.resetOutcome": "confidence" } },
-            { "id": "R_RE_2C", "label": "Clarity on direction", "sets": { "versionOfPath.resetOutcome": "clarity" } },
-            { "id": "R_RE_2D", "label": "A healthier workload rhythm", "sets": { "versionOfPath.resetOutcome": "rhythm" } }
-          ]
-        },
-        {
-          "id": "R_RE_3",
-          "screenTitle": "Support that matters",
-          "prompt": "What kind of support would matter most right now?",
-          "type": "single",
-          "options": [
-            { "id": "R_RE_3A", "label": "Protected time (space to reset)", "sets": { "versionOfPath.supportNeeded": "time" } },
-            { "id": "R_RE_3B", "label": "Learning plan / training support", "sets": { "versionOfPath.supportNeeded": "learning" } },
-            { "id": "R_RE_3C", "label": "Workload adjustment", "sets": { "versionOfPath.supportNeeded": "workload" } },
-            { "id": "R_RE_3D", "label": "Coaching / feedback and clarity", "sets": { "versionOfPath.supportNeeded": "coaching" } }
-          ]
-        },
-        {
-          "id": "R_RE_4",
-          "screenTitle": "The tradeoff test",
-          "prompt": "What tradeoff are you most willing to accept to reset well?",
-          "type": "single",
-          "options": [
-            { "id": "R_RE_4A", "label": "Slower pace for a period of time", "sets": { "versionOfPath.tradeoff": "slowerPace" } },
-            { "id": "R_RE_4B", "label": "Asking for help more directly", "sets": { "versionOfPath.tradeoff": "askForHelp" } },
-            { "id": "R_RE_4C", "label": "Saying no / narrowing priorities", "sets": { "versionOfPath.tradeoff": "narrowing" } },
-            { "id": "R_RE_4D", "label": "Rebuilding confidence step-by-step", "sets": { "versionOfPath.tradeoff": "rebuildConfidence" } }
-          ]
         }
       ]
     }
@@ -755,7 +555,6 @@
         "expandView": "Right now, I’m Expanding My View through {exploreDescriptor} to clarify what’s next.",
         "reset": "Right now, I’m Resetting My Course to rebuild {resetDescriptor} and set myself up for a sustainable next step."
       },
-
       "descriptorMaps": {
         "levelUp": {
           "byLevelUpType": {
@@ -819,7 +618,6 @@
       { "id": "E_RE_1", "path": "reset", "label": "Identify one skill gap and build a 4-week learning plan with manager support", "timeframeDays": 28, "tags": ["recalibration", "learning"] },
       { "id": "E_RE_2", "path": "reset", "label": "Reset workload rhythm: define boundaries + priorities with your People Leader", "timeframeDays": 21, "tags": ["recalibration", "sustainability"] }
     ],
-
     "selectionRules": {
       "defaultPickCount": 2,
       "maxPickCount": 3,
@@ -851,12 +649,20 @@
         "then": {
           "intentTranslation": "Wants to step into people leadership—growing impact through others, not just personal execution.",
           "coachingFocus": [
-            "Find a stretch opportunity that involves leading through others (delegation + feedback + follow-through).",
-            "Pressure-test interest in performance management and accountability conversations."
+            "Give a real leadership rep: leading through others (delegation + feedback + follow-through).",
+            "Pressure-test comfort with accountability conversations, not just coaching."
           ],
+          "leaderAsk": "Give me a safe but real leadership rep: leading through others with clear outcomes and a feedback loop.",
+          "pressureTestQuestion": "Which part of people leadership are you most willing to do even when it’s uncomfortable: feedback, accountability, or development?",
+          "successLooksLike": [
+            "They delegate clearly and follow through without rescuing",
+            "They run 1:1s with clarity (goals, feedback, next steps)",
+            "Stakeholders experience them as steady, accountable, and fair"
+          ],
+          "checkpointDays": 60,
           "watchOuts": [
-            "Don’t equate ‘level up’ with title alone—ensure scope + leadership reps exist first.",
-            "Avoid over-indexing on being the hero/expert instead of building others."
+            "Don’t equate ‘level up’ with title alone—ensure scope and leadership reps exist first.",
+            "Avoid over-indexing on being the hero/expert instead of developing others."
           ]
         }
       },
@@ -868,9 +674,17 @@
             "Assign an initiative with clear outcomes and stakeholder visibility.",
             "Give decision reps: define decision rights, tradeoffs, and post-decision learning."
           ],
+          "leaderAsk": "Give me an initiative with outcomes + decision rights (and a clear definition of success).",
+          "pressureTestQuestion": "If you own the outcome, what decisions are you willing to make without perfect information—and what data will you use anyway?",
+          "successLooksLike": [
+            "They define outcomes, tradeoffs, and decision points up front",
+            "They communicate decisions clearly and keep stakeholders aligned",
+            "They deliver measurable progress against the defined outcome"
+          ],
+          "checkpointDays": 60,
           "watchOuts": [
-            "If ambiguity tolerance is low, add structure: guardrails + checkpoints.",
-            "Avoid stretching without authority—match accountability with decision rights."
+            "Avoid stretching without authority—match accountability with decision rights.",
+            "If ambiguity tolerance is low, add guardrails (checkpoints + clear scope)."
           ]
         }
       },
@@ -880,11 +694,19 @@
           "intentTranslation": "Wants to expand influence and visibility—representing work, shaping direction, aligning stakeholders.",
           "coachingFocus": [
             "Put them in forums where they can represent work and influence decisions.",
-            "Coach executive-ready communication: clarity, tradeoffs, recommendations."
+            "Coach exec-ready communication: clarity, tradeoffs, recommendation."
           ],
+          "leaderAsk": "Give me a forum where I can represent the work and influence outcomes—and coach me on how to show up well.",
+          "pressureTestQuestion": "If you had to earn influence through substance (not visibility), what results or expertise would you anchor it on?",
+          "successLooksLike": [
+            "They show up with clear recommendations and tradeoffs (not just updates)",
+            "Stakeholders leave aligned on decisions and next steps",
+            "Their influence is grounded in credibility and results"
+          ],
+          "checkpointDays": 45,
           "watchOuts": [
             "Visibility without substance can backfire—anchor influence in results and credibility.",
-            "Ensure they’re not avoiding accountability by seeking visibility only."
+            "Make sure visibility isn’t being used to avoid accountability."
           ]
         }
       },
@@ -893,69 +715,105 @@
         "then": {
           "intentTranslation": "Wants to Level Up as a subject matter expert—deeper expertise with broader business impact.",
           "coachingFocus": [
-            "Define what ‘SME at the next level’ looks like (problems owned, influence, outcomes).",
-            "Create opportunities to teach/standardize practices across teams."
+            "Define what SME at the next level looks like: problems owned, influence, outcomes.",
+            "Create opportunities to standardize practices and teach across teams."
           ],
+          "leaderAsk": "Help me define the next-level SME scope (what I own, who I influence, what outcomes I’m responsible for).",
+          "pressureTestQuestion": "What’s the business outcome your expertise should move—and how will we measure that impact?",
+          "successLooksLike": [
+            "They own a clear problem space with measurable business impact",
+            "They scale expertise through playbooks/standards (not becoming a bottleneck)",
+            "Other teams reuse their knowledge and improve outcomes"
+          ],
+          "checkpointDays": 60,
           "watchOuts": [
             "Avoid becoming a bottleneck—build systems and knowledge-sharing.",
-            "Ensure expertise stays connected to business outcomes, not just technical depth."
+            "Keep expertise connected to business outcomes, not just technical depth."
           ]
         }
       },
-
       {
         "when": { "primaryPath": "thrive" },
         "then": {
           "intentTranslation": "Wants intentional depth and impact in the current role—growth without a role change.",
           "coachingFocus": [
-            "Define a meaningful stretch inside the role (complexity, ownership, influence, or mentoring).",
+            "Define a meaningful in-role stretch (complexity, ownership, influence, or mentoring).",
             "Align on visible outcomes so progress is recognized."
           ],
+          "leaderAsk": "Help me define a visible stretch inside my current role (so growth is real, not just ‘more of the same’).",
+          "pressureTestQuestion": "If you stay in role, what new challenge would make this year feel like undeniable progress—not comfort?",
+          "successLooksLike": [
+            "They take on a defined stretch (complexity/ownership/influence) with measurable outcomes",
+            "Their work becomes more visible and reusable (playbook, process improvement, mentoring)",
+            "They can articulate what got stronger and why it matters"
+          ],
+          "checkpointDays": 60,
           "watchOuts": [
             "Avoid comfort masquerading as growth—make the stretch explicit.",
-            "Ensure work remains visible and transferable."
+            "Ensure growth stays visible and transferable."
           ]
         }
       },
-
       {
         "when": { "primaryPath": "moveAcross" },
         "then": {
           "intentTranslation": "Wants a lateral move with purpose—broadening capability, perspective, or fit.",
           "coachingFocus": [
-            "Clarify the target: what they want to gain and what success looks like after the move.",
-            "Identify low-risk ways to test fit (shadowing, short projects, working groups)."
+            "Clarify the purpose: what they want to gain and what success looks like after the move.",
+            "Use low-risk tests first (shadowing, short projects, working groups)."
           ],
+          "leaderAsk": "Help me test-fit a lateral move through one structured exposure (shadowing/project) before we commit.",
+          "pressureTestQuestion": "Are you moving toward a specific capability you want—or moving away from something in the current role?",
+          "successLooksLike": [
+            "They can name what they want to gain (skills/perspective/fit) in one sentence",
+            "They complete one exposure and capture learnings + next decision",
+            "They narrow to 1–2 target roles/teams worth exploring next"
+          ],
+          "checkpointDays": 45,
           "watchOuts": [
             "Avoid lateral drift—anchor the move in a clear purpose and learning plan.",
             "Confirm the move isn’t avoidance of a solvable issue in the current role."
           ]
         }
       },
-
       {
         "when": { "primaryPath": "expandView" },
         "then": {
           "intentTranslation": "Wants exploration with structure—pressure-testing fit before committing to a direction.",
           "coachingFocus": [
-            "Set a short, time-boxed exploration plan with a clear question to answer.",
-            "Choose 1–2 experiences that create real signal (not just curiosity)."
+            "Time-box exploration with one clear question and 1–2 experiences that create signal.",
+            "Set a decision checkpoint: what will we decide based on what we learn?"
           ],
+          "leaderAsk": "Help me structure exploration so it produces a decision—not just curiosity.",
+          "pressureTestQuestion": "What is the one question this exploration must answer for you by the checkpoint date?",
+          "successLooksLike": [
+            "They run a time-boxed exploration with a clear question",
+            "They can say what they learned and what it changes",
+            "They narrow to 1–2 plausible next directions"
+          ],
+          "checkpointDays": 45,
           "watchOuts": [
-            "Exploration can become indefinite—set a decision checkpoint (30/60/90).",
+            "Exploration can become indefinite—set a checkpoint and a decision outcome.",
             "Avoid ‘busy exploration’ that doesn’t change understanding or options."
           ]
         }
       },
-
       {
         "when": { "primaryPath": "reset" },
         "then": {
           "intentTranslation": "Needs a reset to rebuild sustainability, clarity, or skills before the next move.",
           "coachingFocus": [
             "Normalize the reset; co-create a plan (workload, learning, boundaries, timeline).",
-            "Define what ‘ready again’ looks like and how to measure it."
+            "Define what ‘ready again’ looks like and how you’ll measure it."
           ],
+          "leaderAsk": "Help me reset with dignity: a clear plan (time, workload, learning) so I can re-accelerate sustainably.",
+          "pressureTestQuestion": "What would make this reset successful in a way we can both observe and measure?",
+          "successLooksLike": [
+            "They regain sustainable pace (no chronic overload patterns)",
+            "They complete agreed reset plan steps (learning/workload/rhythm)",
+            "They can articulate the next direction with more clarity than today"
+          ],
+          "checkpointDays": 60,
           "watchOuts": [
             "Don’t confuse reset with disengagement—look for intentional rebuilding steps.",
             "Avoid returning to the same overload pattern without structural changes."
@@ -970,6 +828,14 @@
         "Treat this as a 30–60 day discovery sprint with a clear learning question.",
         "Agree on one experiment that creates signal (scope, depth, or breadth)."
       ],
+      "leaderAsk": "Help me pick one experiment that creates clear evidence about what direction fits.",
+      "pressureTestQuestion": "If we had to choose one experiment that would teach us the most in 30–60 days, what would it be—and what would we learn from it?",
+      "successLooksLike": [
+        "They complete one experiment and capture learnings",
+        "They can say what they want more of (and less of) with more confidence",
+        "They narrow the next conversation to 1–2 real options"
+      ],
+      "checkpointDays": 45,
       "watchOuts": [
         "Don’t force certainty too early—create evidence first."
       ]
@@ -980,65 +846,15 @@
     "employeeSummary": {
       "title": "Your Direction Summary",
       "sections": [
-        {
-          "id": "leaning",
-          "label": "Where you're leaning",
-          "format": "You’re leaning toward **{primaryPathLabel}** (with **{secondaryPathLabel}** as a close second). Confidence: **{confidenceLabel}**."
-        },
-        {
-          "id": "why",
-          "label": "Why this fits",
-          "format": "{whyBullets}"
-        },
-        {
-          "id": "meaning",
-          "label": "What you mean by this",
-          "format": "{focusStatement}"
-        },
-        {
-          "id": "next",
-          "label": "Next steps to test and build",
-          "format": "{experimentBullets}"
-        },
-        {
-          "id": "open",
-          "label": "What to discuss with your People Leader",
-          "format": "{openQuestion}"
-        }
+        { "id": "why", "label": "Why this fits" },
+        { "id": "meaning", "label": "What you mean by this" },
+        { "id": "next", "label": "Next steps to test and build" },
+        { "id": "open", "label": "What to discuss with your People Leader" }
       ]
     },
-
     "leaderSummary": {
-      "title": "People Leader Conversation Brief",
-      "sections": [
-        {
-          "id": "translation",
-          "label": "What the employee means",
-          "format": "**{primaryPathLabel}** — {intentTranslation}"
-        },
-        {
-          "id": "evidence",
-          "label": "Evidence from their choices",
-          "format": "{evidenceBullets}"
-        },
-        {
-          "id": "coaching",
-          "label": "Coaching focus",
-          "format": "{coachingBullets}"
-        },
-        {
-          "id": "experiments",
-          "label": "Recommended experiments",
-          "format": "{experimentBullets}"
-        },
-        {
-          "id": "watchouts",
-          "label": "Watch-outs / pressure tests",
-          "format": "{watchoutBullets}"
-        }
-      ]
+      "title": "People Leader Conversation Brief"
     },
-
     "uiStrings": {
       "buttons": {
         "start": "Start",
